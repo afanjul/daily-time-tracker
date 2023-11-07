@@ -1,0 +1,31 @@
+body {
+  min-width: 400px; /* Minimum width of the popup */
+}
+
+.elapsed-time {
+  font-style: italic;
+  margin-bottom: 1rem; /* Spacing below the elapsed time display */
+}
+
+#tasksList {
+  max-height: 200px; /* Limit height of the task list */
+  overflow-y: auto; /* Make task list scrollable */
+  margin-bottom: 1rem; /* Spacing below the task list */
+  scrollbar-width: thin;
+}
+
+#tasksList::-webkit-scrollbar {
+  width: 8px; /* Adjust the width as desired */
+}
+
+#tasksList::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Set the background color of the scrollbar track */
+}
+
+#tasksList::-webkit-scrollbar-thumb {
+  background: #888; /* Set the color of the scrollbar thumb */
+}
+
+#tasksList:hover::-webkit-scrollbar-thumb {
+  background: #555; /* Set the color of the scrollbar thumb when hovered */
+}

@@ -1,0 +1,26 @@
+{
+  "extensionName": {
+    "message": "Daily work tracker"
+  },
+  "extensionDescription": {
+    "message": "Tracks time spent on tasks and exports data to CSV"
+  },
+  "taskNamePlaceholder": {
+    "message": "Enter task name"
+  },
+  "timeSpentLabel": {
+    "message": "Time spent in current task:"
+  },
+  "exportButtonLabel": {
+    "message": "Export to CSV"
+  },
+  "copyToClipboardButtonLabel": {
+    "message": "Copy to clipboard"
+  },
+  "clearButtonLabel": {
+    "message": "Clear all tasks"
+  },
+  "taskNamePrompt": {
+    "message": "Please enter a task name to start tracking:"
+  }
+}

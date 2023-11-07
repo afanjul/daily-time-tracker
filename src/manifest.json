@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "__MSG_extensionName__",
+  "author": "Alejandro Fanjul",
+  "homepage_url": "https://www.alejandrofanjul.com",
+  "description": "__MSG_extensionDescription__",
+  "version": "1.0",
+  "permissions": ["storage", "downloads", "alarms"],
+  "commands": {
+    "toggle-tracking": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+K",
+        "mac": "Command+Shift+K"
+      },
+      "description": "Create or End a new task"
+    }
+  },
+  "background": {
+    "service_worker": "js/background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "resources/icons/icon-inactive.png"
+  },
+  "icons": {
+    "16": "resources/icons/icon-inactive.png",
+    "48": "resources/icons/icon-inactive.png",
+    "128": "resources/icons/icon-inactive.png"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  },
+  "default_locale": "en",
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "offline_enabled": true
+}

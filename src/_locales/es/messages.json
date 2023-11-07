@@ -1,0 +1,26 @@
+{
+  "extensionName": {
+    "message": "Seguimiento diario de trabajo"
+  },
+  "extensionDescription": {
+    "message": "Realiza un seguimiento del tiempo dedicado a las tareas y exporta datos a CSV"
+  },
+  "taskNamePlaceholder": {
+    "message": "Ingrese el nombre de la tarea"
+  },
+  "timeSpentLabel": {
+    "message": "Tiempo dedicado a la tarea actual:"
+  },
+  "exportButtonLabel": {
+    "message": "Exportar a CSV"
+  },
+  "copyToClipboardButtonLabel": {
+    "message": "Copiar al portapapeles"
+  },
+  "clearButtonLabel": {
+    "message": "Borrar todas las tareas"
+  },
+  "taskNamePrompt": {
+    "message": "Ingrese un nombre de tarea para comenzar a rastrear:"
+  }
+}
