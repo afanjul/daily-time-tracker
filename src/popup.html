@@ -14,7 +14,12 @@
 <body>
 
 <div class="container p-3">
-  <h1 class="my-3 h6" data-i18n="extensionName">Daily work tracker</h1>
+  <h1 class="my-3 h6 float-start" data-i18n="extensionName">Daily work tracker </h1>
+
+  <div id="elapsedTime" class="elapsed-time my-3 float-end h6" style="display: none;">
+     <span id="timeSpent">00:00:00</span>
+  </div>
+
   <div class="input-group mb-3">
     <input type="text" id="taskName" class="form-control form-control-sm" placeholder="Enter task name" data-i18n="taskNamePlaceholder" aria-label="Task name">
     <button class="btn btn-outline-secondary" type="button" id="pauseResumeButton" style="display: none">
@@ -25,12 +30,23 @@
     </button>
   </div>
 
-  <div id="elapsedTime" class="elapsed-time mb-3" style="display: none;">
-    <span id="timeSpentLabel" data-i18n="timeSpentLabel"></span> <span id="timeSpent">00:00:00</span>
+
+
+  <div id="categorizationWrapper" style="display: none">
+    <div class="row">
+      <div class="col mb-3">
+        <label class="small" for="categoryDropdown">Category:</label>
+        <select id="categoryDropdown" class="form-select form-select-sm" aria-label="Category"></select>
+      </div>
+      <div class="col mb-3">
+        <label class="small" for="subcategoryDropdown">Subcategory:</label>
+        <select id="subcategoryDropdown" class="form-select form-select-sm" aria-label="Subcategory"></select>
+      </div>
+    </div>
   </div>
-  
+
   <ul id="tasksList" class="list-group mb-4"></ul>
-  
+
   <footer class="footer bg-light p-2">
     <button id="exportButton" class="btn btn-outline-secondary btn-sm">
       <i class="bi bi-file-earmark-text"></i> <!-- Export to CSV icon -->

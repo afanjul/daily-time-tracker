@@ -22,5 +22,20 @@
   },
   "taskNamePrompt": {
     "message": "Ingrese un nombre de tarea para comenzar a rastrear:"
+  },
+  "enableCategorizationLabel": {
+    "message": "Habilitar Categorización"
+  },
+  "categoriesLabel": {
+    "message": "Categorías:"
+  },
+  "categoriesTextarea": {
+    "message": "Inserta los nombres de las categorías en la forma: Categoría > Subcategoría"
+  },
+  "languageLabel": {
+    "message": "Idioma:"
+  },
+  "saveButton": {
+    "message": "Guardar"
   }
 }

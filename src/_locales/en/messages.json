@@ -22,5 +22,20 @@
   },
   "taskNamePrompt": {
     "message": "Please enter a task name to start tracking:"
+  },
+  "enableCategorizationLabel": {
+    "message": "Enable Categorization"
+  },
+  "categoriesLabel": {
+    "message": "Categories:"
+  },
+  "categoriesTextarea": {
+    "message": "Enter category names in the form of: Category > Subcategory"
+  },
+  "languageLabel": {
+    "message": "Language:"
+  },
+  "saveButton": {
+    "message": "Save"
   }
 }

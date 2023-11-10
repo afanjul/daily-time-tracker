@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title data-i18n="extensionName">Daily work tracker</title>
+    <script src="resources/js/cash.min.js"></script>
+    <script defer src="js/options.js"></script>
+    <script defer src="js/translate.js"></script>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="resources/css/bootstrap-icons.min.css">
+</head>
+<body>
+
+<div class="container p-3">
+    <h1 class="my-3 h6" data-i18n="extensionName">Daily work tracker</h1>
+
+    <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="enableCategorizationCheckbox">
+        <label class="form-check-label" for="enableCategorizationCheckbox" data-i18n="enableCategorizationLabel">Enable
+            Categorization</label>
+    </div>
+
+    <div id="categoriesTextareaWrapper" class="mb-3">
+        <label for="categoriesTextarea" class="form-label" data-i18n="categoriesLabel">Categories:</label>
+        <textarea class="form-control" id="categoriesTextarea" rows="10" placeholder="Enter category names in the form of: Category > Subcategory" data-i18n="categoriesTextarea"></textarea>
+    </div>
+
+    <button id="saveButton" class="btn btn-primary" data-i18n="saveButton">Save</button>
+</div>
+
+</body>
+</html>

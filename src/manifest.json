@@ -4,7 +4,7 @@
   "author": "Alejandro Fanjul",
   "homepage_url": "https://www.alejandrofanjul.com",
   "description": "__MSG_extensionDescription__",
-  "version": "1.0",
+  "version": "1.1",
   "permissions": ["storage", "downloads", "alarms"],
   "commands": {
     "toggle-tracking": {

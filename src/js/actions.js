@@ -2,12 +2,14 @@ $(function () {
     const $exportButton = $('#exportButton');
     const $copyToClipboard = $('#copyToClipboardButton');
     const $clearButton = $('#clearButton');
-    const header = 'Task Name,Start Time,End Time,Duration (hours),Duration (minutes)';
+    const header = 'Task Name,Start Time,End Time,Duration (hours),Duration (minutes),Category,Subcategory';
 
-    function clearTasks() {
-        chrome.storage.local.set({tasks: []}, function() {
-           window.updateTasksList();
-        });
+    function clearAllTasks() {
+        if (confirm('Are you sure you want to clear all tasks? This action cannot be undone.')) {
+            chrome.storage.local.set({tasks: []}, function () {
+                window.updateTasksList();
+            });
+        }
     }
 
     function escapeCSV(value) {
@@ -20,12 +22,14 @@ $(function () {
 
         const startTimeString = startTime.toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'});
         const endTimeString = endTime.toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'});
+        const category = task.category;
+        const subcategory = task.subcategory;
 
         const durationInMinutes = Math.round((endTime - startTime) / 1000 / 60);
         const durationInHours = Math.floor(durationInMinutes / 60);
         const remainingMinutes = durationInMinutes % 60;
 
-        return `${escapeCSV(task.name)},${startTimeString},${endTimeString},${durationInHours},${remainingMinutes}`;
+        return `${escapeCSV(task.name)},${startTimeString},${endTimeString},${durationInHours},${remainingMinutes},${category},${subcategory}`;
     }
 
     function copyTasksToClipboard() {
@@ -48,7 +52,7 @@ $(function () {
         });
     }
 
-    $clearButton.on('click', clearTasks);
+    $clearButton.on('click', clearAllTasks);
 
     $exportButton.on('click', function () {
         exportTasksToCSV();
